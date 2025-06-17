@@ -1,81 +1,81 @@
-# 💀 Forhad's NetHunter CLI Setup (Termux Edition)
+# 💀 NetHunter-Termux-Forhad
 
-A lightweight, CLI-only NetHunter-like environment in Termux, using Debian + essential Kali tools.
+A lightweight custom Debian NetHunter installer for Termux, designed with a professional CLI prompt and fast tool access.
 
 ---
 
-## 🔧 Installation
+## 📦 Features
+
+* Minimal Kali NetHunter install (CLI only, no GUI)
+* Custom shell prompt: `[forhad@localhost ~]$`
+* Fast shortcut: just type `nethunter` to start NetHunter
+* Installs core tools: `nmap`, `hydra`, `sqlmap`, `metasploit-framework`, `dnsenum`, `whois`, `dig`, and more
+* Works on almost all Android 7+ phones
+* Root not required (Proot-based)
+
+---
+
+## 🛠️ Installation
 
 ```bash
+pkg update && pkg upgrade -y
 pkg install git -y
-git clone https://github.com/Forhadj/nethunter-termux-custom.git
-cd nethunter-termux-custom
+git clone https://github.com/Forhadj/nethunter
+cd nethunter
 bash install.sh
 ```
 
-Then just run:
+After install, launch with:
 
 ```bash
 nethunter
 ```
 
-It launches a Debian shell with:
+---
 
+## 🚀 Usage Example
+
+```bash
+[forhad@localhost ~]$ nmap -Pn -sT 192.168.0.1
+[forhad@localhost ~]$ msfconsole
 ```
-💀 forhad@localhost [~]
-```
 
 ---
 
-## 📋 Tools Pre-Installed
+## 💡 What You Get
 
-- nmap  
-- hydra  
-- sqlmap  
-- metasploit-framework  
-- dnsutils  
-
----
-
-## ❗ Common Problems & Fixes
-
-| Error Message                             | Solution                                                                 |
-|-------------------------------------------|--------------------------------------------------------------------------|
-| `unknown distribution 'kali'`            | We install Debian + Kali tools manually for maximum compatibility.        |
-| `command not found: nethunter`           | Make sure you reopened Termux or restarted session after install.         |
-| `proot-distro should not be run as root` | Exit shell first (`exit`) before running `nethunter`.                    |
+* CLI Kali inside Termux without GUI
+* Runs tools just like in desktop Linux
+* Auto prompt customization with emoji
+* Lightweight installer script (under 20MB total)
 
 ---
 
-## ✅ Tips & Shortcuts
+## ⚠️ Possible Errors & Fixes
 
-- To edit prompt:  
-  ```bash
-  nano ~/.bashrc
-  ```
-  Look for the line with `PS1='...💀 forhad@localhost...'`  
-
-- If you want a different launcher name, rename the script in `$PREFIX/bin/`, e.g.:  
-  ```bash
-  mv $PREFIX/bin/nethunter $PREFIX/bin/forhad
-  ```
-
-- Want more tools? After entering the shell via `nethunter`, install like:  
-  ```bash
-  apt update && apt install whois gobuster
-  ```
+| Issue                                             | Fix                                                                      |
+| ------------------------------------------------- | ------------------------------------------------------------------------ |
+| `proot-distro should not be executed under PRoot` | Exit previous login with `exit` and run `nethunter` from Termux directly |
+| `start-kali: command not found`                   | Use `nethunter` instead, it’s a shortcut                                 |
+| Package not found                                 | Run: `apt update && apt full-upgrade -y` inside NetHunter                |
 
 ---
 
-## 📚 Disclaimer
+## 🌐 Socials
 
-For educational and legal use only. Unauthorized hacking is illegal.
+* 📘 Facebook: [facebook.com/forhadhasan995](https://facebook.com/forhadhasan995)
+* 🧑‍💻 GitHub: [github.com/Forhadj](https://github.com/Forhadj)
+* 📢 Telegram: [t.me/f\_forhad](https://t.me/f_forhad)
+* ▶️ YouTube: [youtube.com/@forhad2.00](https://youtube.com/@forhad2.00)
 
 ---
 
-## 📞 Contact
+## 📄 License
 
-- Facebook: [https://facebook.com/forhadhasan995](https://facebook.com/forhadhasan995)  
-- GitHub: [https://github.com/Forhadj](https://github.com/Forhadj)  
-- Telegram: [https://t.me/f_forhad](https://t.me/f_forhad)  
-- YouTube: [https://youtube.com/@forhad2.00](https://youtube.com/@forhad2.00)  
+MIT License — Free to use, share, and modify.
+
+---
+
+> 🔥 Built by Forhad for learners & hackers who want full Kali tools in their pocket.
+>
+> 💀 Stay ethical. Stay smart.
