@@ -19,6 +19,6 @@ proot-distro login debian
 EOF
 chmod +x $PREFIX/bin/nethunter
 
-echo -e "\n# 💀 Forhad Prompt\nPS1='\n\[\e[1;31m\]💀 forhad@localhost \[\e[1;34m\][\w]\n\[\e[0m\] '" >> ~/.bashrc
+echo -e "\n# 🙂 Forhad Prompt\nPS1='\n\[\e[1;31m\]🙂 forhad@localhost \[\e[1;34m\][\w]\n\[\e[0m\] '" >> ~/.bashrc
 
 echo -e "\n✅ Installation complete!\nRun 'nethunter' to start the CLI shell.\n"
