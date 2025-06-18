@@ -12,7 +12,7 @@ apt update && apt upgrade -y
 apt install -y nmap hydra sqlmap metasploit-framework dnsutils
 
 # Add custom prompt inside Debian
-echo -e "\n# Custom prompt for Forhad\nPS1='\\\e[1;32m\┌──(forhad㉿localhost)-[\\w]\\n└─\\$ \\\e[0m\'" >> /root/.bashrc
+echo -e "\n# Custom prompt for Forhad\nPS1='\\[\\e[1;32m\\]┌──(forhad㉿localhost)-[\\w]\\n└─\\$ \\[\\e[0m\\]'" >> /root/.bashrc
 
 logout
 EOF
